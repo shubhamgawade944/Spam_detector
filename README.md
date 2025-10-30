@@ -77,4 +77,4 @@ Shubham Gawade
 📧 shubhamgawade132003@gmail.com
 
 🌐 GitHub Profile
-![App Screenshot](https://github.com/yourusername/Spam_detector/blob/main/images/app_screenshot.png)
+![App Screenshot](Spam_detector.png)
