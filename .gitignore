@@ -1,0 +1,15 @@
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore large or binary files
+*.exe
+*.zip
+*.tar
+*.rar
+*.pkl
+
+# Ignore IDE & cache
+__pycache__/
+.idea/
+nltk_data/
