@@ -4,11 +4,19 @@ import string
 from  nltk.corpus import  stopwords
 import  nltk
 from  nltk.stem.porter import  PorterStemmer
-
+import os 
 ps = PorterStemmer()
 nltk.download('stopwords')
 
+nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
 
+for resource in ["punkt", "punkt_tab", "stopwords"]:
+    try:
+        nltk.data.find(f"tokenizers/{resource}")
+    except LookupError:
+        nltk.download(resource, download_dir=nltk_data_dir)
 
 
 def trans(text):
@@ -53,4 +61,5 @@ if st.button('Predict'):
     if result == 1:
         st.header("Spam")
     else:
+
         st.header("Not Spam")
